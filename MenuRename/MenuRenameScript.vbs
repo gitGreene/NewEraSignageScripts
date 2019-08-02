@@ -1,9 +1,9 @@
 dim fso, folder, folderName, dateInput, day, month, date, oldFileName, newFileName, pathName
 
 set fso = CreateObject("Scripting.FileSystemObject")
-'   ENTER FOLDER PATH HERE:
+'                                                  ENTER FOLDER PATH HERE:
 set folder = fso.GetFolder("")
-'ENTER FOLDER PATH BEFORE HERE   
+'ENTER FOLDER PATH BEFORE HERE                                                  
 slideNumber = 1
 
 inputPrefix = InputBox("Enter Prefix:", "Input prefix")
