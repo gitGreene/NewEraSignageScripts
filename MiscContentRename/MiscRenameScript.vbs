@@ -1,7 +1,8 @@
 dim fso, theFolder, folderName, oldFileName, newFileName, pathName
 
 set fso = CreateObject("Scripting.FileSystemObject")
-set theFolder = fso.GetFolder("C:\Users\MITCH.GREENE\OneDrive - New Era Technology\Desktop\ScriptingTests\MiscContentRename")
+'ENTER FOLDER NAME HERE:
+set theFolder = fso.GetFolder("")
 folderName = theFolder.name
 slideNumber = 1
 

@@ -1,7 +1,8 @@
 dim fso, folder, folderName, dateInput, day, month, date, oldFileName, newFileName, pathName
 
 set fso = CreateObject("Scripting.FileSystemObject")
-set folder = fso.GetFolder("C:\Users\MITCH.GREENE\OneDrive - New Era Technology\Desktop\ScriptingTests\MenuRename")
+'ENTER FOLDER PATH HERE:
+set folder = fso.GetFolder("")
 slideNumber = 1
 
 inputPrefix = InputBox("Enter Prefix:", "Input prefix")
