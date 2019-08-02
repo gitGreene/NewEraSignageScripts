@@ -1,8 +1,9 @@
 dim fso, theFolder, folderName, oldFileName, newFileName, pathName
 
 set fso = CreateObject("Scripting.FileSystemObject")
-'ENTER FOLDER NAME HERE:
+'   ENTER FOLDER PATH HERE:
 set theFolder = fso.GetFolder("")
+'ENTER FOLDER PATH BEFORE HERE   
 folderName = theFolder.name
 slideNumber = 1
 
