@@ -2,7 +2,7 @@ dim fso, theFolder, folderName, oldFileName, newFileName, pathName
 
 set fso = CreateObject("Scripting.FileSystemObject")
 '                                                   
-set theFolder = fso.GetFolder("ENTER FOLDER PATH HERE")
+set theFolder = fso.GetFolder("C:\Users\mitgreene-c\OneDrive - Shire PLC\Desktop\DS\NewEraSignageScripts\MiscContentRename")
 '                                                   
 folderName = theFolder.name
 slideNumber = 1
@@ -15,7 +15,6 @@ startMonth = MonthName(DatePart("m", inputStartDate), true)
 startDate = DatePart("d", inputStartDate)
 
 inputEndDate = InputBox("Enter date in MM/DD/YYYY Format", "Input end date")
-
 endDay = WeekDayName(DatePart("w", inputEndDate), true)
 endMonth = MonthName(DatePart("m", inputEndDate), true)
 endDate = DatePart("d", inputEndDate)
@@ -29,15 +28,15 @@ else
 End If
 
 
-
 Function renameFiles()
 
 For Each File in theFolder.Files
 
-if StrComp(File.Name, "MiscRenameScript.vbs")<>0 Then
+if StrComp(File.Name, "MiscContentRename.vbs")<>0 AND StrComp(File.Name, "MiscContentRename.wsh")<>0 Then
 newFileName = inputPrefix & " " & startDay & " " & startMonth & " " & startDate & " - " & endDay & " " & endMonth & " " & endDate & " Slide " & slideNumber
 File.Name = Replace(File.Name, File.Name, newFileName)
 slideNumber = slideNumber + 1
 End If
-
 Next
+
+End Function
